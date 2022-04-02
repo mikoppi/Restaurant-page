@@ -20,7 +20,7 @@ function createNavBar() {
     const navBar=document.createElement('nav');
 
     const homeButton=document.createElement('button');
-    homeButton.classList.add('button-nav home');
+    homeButton.classList.add('button-nav','home');
     homeButton.textContent='Home';
     homeButton.addEventListener("click", (e) => {
         if (e.target.classList.contains("active")) return;
@@ -29,7 +29,7 @@ function createNavBar() {
       });
 
     const menuButton=document.createElement('button');
-    menuButton.classList.add('button-nav menu');
+    menuButton.classList.add('button-nav','menu');
     menuButton.textContent='Menu';
     menuButton.addEventListener("click", (e) => {
         if (e.target.classList.contains("active")) return;
@@ -38,7 +38,7 @@ function createNavBar() {
       });
 
     const contactButton=document.createElement('button');
-    contactButton.classList.add('button-nav contact');
+    contactButton.classList.add('button-nav','contact');
     contactButton.textContent='Contact';
     contactButton.addEventListener("click", (e) => {
         if (e.target.classList.contains("active")) return;
@@ -50,7 +50,7 @@ function createNavBar() {
     navBar.appendChild(menuButton);
     navBar.appendChild(contactButton);
     return navBar;
-    
+
 }
 
 function createMain() {
@@ -66,8 +66,10 @@ function createFooter() {
     footer.classList.add('footer');
 
     const footerText=document.createElement('p');
-    footerText.classList.add('footer text');
+    footerText.classList.add('footer','text');
     footerText.textContent='Made by mikoppi'
+
+    footer.appendChild(footerText);
     
     return footer;
 
@@ -88,9 +90,12 @@ function setButtonActive(givenButton) {
 function startWebsite() {
     const content=document.getElementById('content');
 
-    content.appendChild(createHeader);
-    content.appendChild(createMain);
-    content.appendChild(createFooter);
+    content.appendChild(createHeader());
+    content.appendChild(createMain());
+    content.appendChild(createFooter());
+
+    setButtonActive(document.querySelector(".button-nav"));
+    loadHomeContent();
 
 }
 
