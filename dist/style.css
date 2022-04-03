@@ -3,6 +3,79 @@
     padding: 0;
     margin: 0;
 }
+body {
+    font-family: 'Montserrat', cursive;
+    font-size: 1.6rem;
+    color: white;
+    background-color: rgb(255, 255, 255);
+    background-image: url('./tellers_restaurant_and_bar__lawrence_kansas-wallpaper-2560x1440.jpg');
+    background-size: cover;
+    
+}
+
+.header, .main, .footer {
+    background-color: rgba(0, 0, 0, 0.534);    
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    width: 100vw;
+    gap:40px;
+    padding-bottom: 2vh;
+    padding-top: 50px;
+    
+}
+
+nav {
+    display: flex;
+    flex-direction: row;    
+
+}
+
+.button-nav {
+    padding:8px;
+    font-size: large;
+    background-color: rgb(104, 97, 31);
+    color: white;
+    margin: 7px;
+    border-style: none;
+    border-radius: 12px;
+
+}
+
+.main {
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    border-radius: 20%;
+    margin-bottom: 50px;
+    height: 300px;
+    width: auto;
+}
+    
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    padding: 10px;
+}
+
+.footer .text {
+    font-size:x-small;
+}
+
 
 #content {
     display: flex;
